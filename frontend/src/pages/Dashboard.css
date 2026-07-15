@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap');
+
+.db-page {
+    max-width: 900px;
+}
+
+.db-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.db-title {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+    margin: 0 0 6px;
+    color: var(--dash-text);
+}
+
+.db-subtitle {
+    color: var(--dash-text-muted);
+    font-size: 14px;
+    margin: 0;
+}
+
+.db-cta {
+    background: #0b1220;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    border: none;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.05s ease;
+}
+
+.dash-shell.theme-dark .db-cta {
+    background: #0ea5a0;
+    color: #06201e;
+}
+
+.db-cta:hover {
+    background: #1a2438;
+}
+
+.dash-shell.theme-dark .db-cta:hover {
+    background: #11b8b2;
+}
+
+.db-cta:active {
+    transform: translateY(1px);
+}
+
+.db-cta-outline {
+    background: transparent;
+    color: #0ea5a0;
+    border: 1px solid #0ea5a0;
+}
+
+.dash-shell.theme-dark .db-cta-outline {
+    color: #2dd4bf;
+    border-color: #2dd4bf;
+}
+
+.db-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.db-stat-card {
+    background: var(--dash-card-bg);
+    border: 1px solid var(--dash-border);
+    border-left: 3px solid #64748b;
+    border-radius: 10px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    box-shadow: 0 1px 3px rgba(16, 21, 31, 0.06);
+    animation: fadeInUp 0.4s ease both;
+}
+
+.db-stat-card:nth-child(1) {
+    animation-delay: 0s;
+    border-left-color: #64748b;
+}
+
+.db-stat-card:nth-child(2) {
+    animation-delay: 0.06s;
+    border-left-color: #f5a524;
+}
+
+.db-stat-card:nth-child(3) {
+    animation-delay: 0.12s;
+    border-left-color: #22c55e;
+}
+
+.db-stat-num {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--dash-text);
+}
+
+.db-stat-label {
+    font-size: 13px;
+    color: var(--dash-text-muted);
+}
+
+.db-section-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 14px;
+    color: var(--dash-text);
+}
+
+.db-empty,
+.db-empty-box {
+    color: var(--dash-text-muted);
+    font-size: 14px;
+}
+
+.db-empty-box {
+    background: var(--dash-card-bg);
+    border: 1px dashed var(--dash-border);
+    border-radius: 10px;
+    padding: 32px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+
+.db-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.db-complaint-card {
+    background: var(--dash-card-bg);
+    border: 1px solid var(--dash-border);
+    border-left: 3px solid #94a3b8;
+    border-radius: 10px;
+    padding: 14px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 1px 3px rgba(16, 21, 31, 0.06);
+    animation: fadeInUp 0.35s ease both;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.db-complaint-card:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.db-complaint-card:nth-child(2) {
+    animation-delay: 0.05s;
+}
+
+.db-complaint-card:nth-child(3) {
+    animation-delay: 0.1s;
+}
+
+.db-complaint-card:nth-child(4) {
+    animation-delay: 0.15s;
+}
+
+.db-complaint-card:nth-child(5) {
+    animation-delay: 0.2s;
+}
+
+.db-complaint-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(16, 21, 31, 0.1);
+}
+
+.db-complaint-card:has(.pill-pend) {
+    border-left-color: #f5a524;
+}
+
+.db-complaint-card:has(.pill-prog) {
+    border-left-color: #0ea5a0;
+}
+
+.db-complaint-card:has(.pill-done) {
+    border-left-color: #22c55e;
+}
+
+.db-complaint-main {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+}
+
+.db-complaint-title {
+    font-size: 14.5px;
+    font-weight: 600;
+    color: var(--dash-text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.db-complaint-cat {
+    font-size: 12.5px;
+    color: var(--dash-text-muted);
+}
+
+.db-pill {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
+.pill-pend {
+    background: rgba(245, 165, 36, 0.16);
+    color: #d38a1a;
+}
+
+.pill-prog {
+    background: rgba(14, 165, 160, 0.16);
+    color: #0d9a95;
+}
+
+.pill-done {
+    background: rgba(34, 197, 94, 0.16);
+    color: #16a34a;
+}
+
+.cc-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 520px;
+    margin-top: 24px;
+}
+
+.cc-label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--dash-text);
+}
+
+.cc-input {
+    font-family: "Inter", sans-serif;
+    font-size: 14.5px;
+    padding: 11px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--dash-border);
+    background: var(--dash-input-bg);
+    color: var(--dash-text);
+    outline: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cc-input::placeholder {
+    color: var(--dash-text-muted);
+}
+
+.cc-input:focus-visible {
+    border-color: #0ea5a0;
+    box-shadow: 0 0 0 3px rgba(14, 165, 160, 0.15);
+}
+
+textarea.cc-input {
+    resize: vertical;
+    font-family: inherit;
+}
+
+.cc-file {
+    font-size: 13.5px;
+    color: var(--dash-text);
+}
+
+.db-error {
+    background: #fef2f2;
+    color: #b42318;
+    border: 1px solid #fecaca;
+    padding: 9px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    margin: 0;
+}
+
+.dash-shell.theme-dark .db-error {
+    background: rgba(180, 35, 24, 0.15);
+    border-color: rgba(180, 35, 24, 0.4);
+    color: #ff8b7a;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .db-stat-card,
+    .db-complaint-card {
+        animation: none;
+    }
+}
